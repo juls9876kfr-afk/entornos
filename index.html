@@ -83,6 +83,101 @@ button,a{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none
 }
 @media(hover:none){.card:hover,.btn:hover,.choice:hover{transform:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+
+/* Ajustes adicionales de adaptación móvil */
+@media (max-width: 950px) {
+  html { scroll-padding-top: 76px; }
+  .top { height: auto; min-height: 70px; }
+  .nav { min-height: 70px; height: auto; padding-block: 10px; }
+  .brand { flex: 1 1 auto; min-width: 0; overflow: hidden; }
+  .brand > div { min-width: 0; }
+  .brand b { display: block; line-height: 1.2; }
+  .brand small { line-height: 1.25; }
+  .menu { flex: 0 0 auto; min-width: 46px; min-height: 44px; }
+  .links { top: calc(100% + 1px); z-index: 60; max-height: calc(100dvh - 90px); overflow-y: auto; }
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .hero > * { min-width: 0; }
+  .heroVisual { width: 100%; }
+  .sectionHead > * { min-width: 0; }
+  .gameLayout { grid-template-columns: minmax(0, 1fr); }
+  .gameMain, .gameSide, .card, .lawPanel, .quiz, .comic { min-width: 0; }
+}
+@media (max-width: 650px) {
+  *, *::before, *::after { max-width: 100%; }
+  html, body { width: 100%; overflow-x: clip; }
+  .shell { width: 100%; padding-left: 16px; padding-right: 16px; }
+  .nav { padding-left: 16px; padding-right: 16px; gap: 10px; }
+  .brand { gap: 9px; }
+  .brand img { width: 40px; height: 40px; flex: 0 0 40px; }
+  .brand b { font-size: 12px; overflow-wrap: anywhere; }
+  .brand small { display: none; }
+  .navRight { gap: 0; }
+  .menu { padding: 8px 10px; }
+  .links { left: 12px; right: 12px; }
+  .hero { padding-top: 35px; padding-bottom: 42px; gap: 10px; text-align: left; }
+  .hero h1 { font-size: clamp(37px, 10.5vw, 56px); line-height: 1.02; letter-spacing: -2px; overflow-wrap: anywhere; }
+  .hero p { font-size: 15px; line-height: 1.6; }
+  .actions { justify-content: stretch; }
+  .actions .btn { flex: 1 1 100%; justify-content: center; min-height: 46px; }
+  .heroVisual { min-height: 285px; margin-top: 10px; }
+  .orbit { width: min(270px, 75vw); box-shadow: 0 0 0 20px #00c89608, 0 0 0 42px #00c89605; }
+  .dashboard { width: min(100%, 330px); padding: 17px; transform: none; }
+  .dashTitle { font-size: 20px; }
+  .miniStats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mini { min-width: 0; padding: 8px; }
+  .mini strong { font-size: 18px; }
+  .mini span { font-size: 9px; overflow-wrap: anywhere; }
+  .floatTag { font-size: 9px; padding: 8px 10px; }
+  .tagA { right: 0; top: 10px; }
+  .tagB { left: 0; bottom: 8px; }
+  .section { padding: 42px 0; }
+  .section h2 { font-size: clamp(27px, 8vw, 36px); letter-spacing: -1px; }
+  .sectionHead { margin-bottom: 20px; }
+  .sectionHead p { font-size: 13px; }
+  .grid { gap: 12px; }
+  .grid3, .grid2, .glossary { grid-template-columns: minmax(0, 1fr); }
+  .card { padding: 19px; border-radius: 18px; }
+  .bigNumber { font-size: clamp(32px, 9vw, 39px); overflow-wrap: anywhere; }
+  .card h3 { font-size: 17px; }
+  .card p, .lawPanel p, .lawPanel li { font-size: 13px; line-height: 1.6; }
+  .tabs { display: flex; flex-wrap: nowrap; overflow-x: auto; overscroll-behavior-x: contain; padding-bottom: 8px; scrollbar-width: thin; }
+  .tab { flex: 0 0 auto; white-space: nowrap; }
+  .lawPanel { padding: 19px; }
+  .lawPanel h3 { font-size: 21px; }
+  .gameMain { padding: 17px; border-radius: 19px; }
+  .gameBar { flex-direction: column; align-items: flex-start; }
+  .gameMain h3 { font-size: clamp(22px, 6.5vw, 27px); }
+  .story { font-size: 13px; min-height: 0; }
+  .choice { align-items: flex-start; padding: 12px; font-size: 12px; line-height: 1.5; }
+  .choice span:last-child { min-width: 0; overflow-wrap: anywhere; }
+  .gameSide { display: grid; grid-template-columns: minmax(0, 1fr); }
+  .metricCard { padding: 16px; }
+  .comic { grid-template-columns: minmax(0, 1fr); }
+  .comicArt { min-height: 230px; padding: 20px; }
+  .comicPeople { font-size: 62px; }
+  .comicText { padding: 20px; }
+  .comicText h3 { font-size: 23px; }
+  .quiz { padding: 18px; }
+  .quizTop { align-items: flex-start; flex-direction: column; gap: 7px; }
+  .quizTop h3 { font-size: 20px; }
+  .quizQuestion { font-size: 18px; margin: 20px 0 13px; }
+  .quizAnswers { grid-template-columns: minmax(0, 1fr); }
+  .quizAnswers button { line-height: 1.5; }
+  .footer { padding: 28px 0 38px; }
+  .footerIn { align-items: flex-start; flex-direction: column; }
+  .footerIn .btn { width: 100%; justify-content: center; }
+  .toast { width: calc(100% - 32px); text-align: center; bottom: 14px; }
+}
+@media (max-width: 380px) {
+  .shell { padding-left: 13px; padding-right: 13px; }
+  .nav { padding-left: 13px; padding-right: 13px; }
+  .hero h1 { font-size: 37px; }
+  .dashboard { padding: 14px; }
+  .miniStats { gap: 5px; }
+  .mini strong { font-size: 16px; }
+  .card, .gameMain, .quiz { padding: 15px; }
+}
+
 </style>
 </head>
 <body>
